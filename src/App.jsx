@@ -275,7 +275,7 @@ export default function App() {
 
         {/* LECCIONES */}
         {tab === "lecciones" && (
-          <div style={{ maxWidth: 900, margin: "0 auto" }}>
+          <div style={{ width: "100%" }}>
             {/* Selector de lenguaje */}
             <div style={{ display: "flex", gap: 8, marginBottom: 14 }}>
               {[["python","🐍 Python"],["javascript","⚡ JavaScript"]].map(([l, label]) => (
@@ -376,7 +376,7 @@ export default function App() {
 
         {/* EDITOR */}
         {tab === "editor" && (
-          <div style={{ maxWidth: 800, margin: "0 auto" }}>
+          <div style={{ width: "100%" }}>
             <h2 style={{ margin: "0 0 14px", fontSize: 20, fontWeight: 800 }}>💻 Editor libre</h2>
             <div style={{ display: "flex", gap: 8, marginBottom: 14 }}>
               {[["python","🐍 Python"],["javascript","⚡ JavaScript"]].map(([l, label]) => (
@@ -397,7 +397,7 @@ export default function App() {
 
         {/* RETOS */}
         {tab === "retos" && !challenge && (
-          <div style={{ maxWidth: 800, margin: "0 auto" }}>
+          <div style={{ width: "100%" }}>
             <h2 style={{ margin: "0 0 6px", fontSize: 20, fontWeight: 800 }}>🏆 Retos</h2>
             <p style={{ margin: "0 0 16px", color: "#64748b", fontSize: 14 }}>Pon a prueba lo aprendido y gana puntos.</p>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))", gap: 12 }}>
@@ -420,7 +420,7 @@ export default function App() {
         )}
 
         {tab === "retos" && challenge && (
-          <div style={{ maxWidth: 800, margin: "0 auto" }}>
+          <div style={{ width: "100%" }}>
             <button onClick={() => setChallenge(null)} style={{ background: "none", border: "none", color: "#64748b", cursor: "pointer", fontSize: 14, marginBottom: 14, padding: 0 }}>← Volver</button>
             <div style={{ display: "flex", gap: 8, marginBottom: 12, alignItems: "center", flexWrap: "wrap" }}>
               <h2 style={{ margin: 0, fontSize: 20, fontWeight: 800 }}>{challenge.title}</h2>
@@ -447,7 +447,7 @@ export default function App() {
 
         {/* ASISTENTE */}
         {tab === "asistente" && (
-          <div style={{ maxWidth: 700, margin: "0 auto", display: "flex", flexDirection: "column", height: "calc(100vh - 160px)", minHeight: 400 }}>
+          <div style={{ width: "100%", display: "flex", flexDirection: "column", height: "calc(100vh - 160px)", minHeight: 400 }}>
             <h2 style={{ margin: "0 0 12px", fontSize: 20, fontWeight: 800 }}>🤖 Asistente IA</h2>
             <div style={{ ...card, flex: 1, overflowY: "auto", display: "flex", flexDirection: "column" }}>
               {aiMessages.map((m, i) => (
